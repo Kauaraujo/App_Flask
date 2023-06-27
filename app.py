@@ -22,4 +22,9 @@ def sobre():
 			registros.append({"aluno": request.form.get("aluno"), "nota": request.form.get("nota")})
 	return render_template("sobre.html", registros=registros)
 
+
+@app.route('/login', methods=["GET", "POST"])
+def login():
+	return render_template("login.html")
+
 app.run(debug=True)
